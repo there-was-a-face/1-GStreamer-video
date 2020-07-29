@@ -1,4 +1,10 @@
-# GStreamer video processing pipeline for an RTSP or web camera
+# GStreamer video processing pipeline
+GStreamer video processing pipeline with raw sample handling, for an RTSP stream, web camera, or pretty much any GStreamer pipeline. 
+
+Uses [GStreamer-Sharp for .NET Core](https://github.com/vladkol/gstreamer-netcore). 
+
+Main purpose of this sample is to introduce [GstVideoStream helper class](GstVideoStream/GstVideoStream.cs) that helps creating video procesing pipelines and handling raw video frames. 
+
 Made for [Video capture using GStreamer and gstreamer-netcore](https://vladkol.com/posts/gstreamer/) post. 
 
 ## Requirements 
@@ -13,7 +19,5 @@ Made for [Video capture using GStreamer and gstreamer-netcore](https://vladkol.c
 > * with **--source_uri** option - provide uri to use as the source:``` GStreamerDotNet --source_uri rtsp://admin:password@192.168.0.17:554/``` 
 > * any gstreamer pipeline command line (without 'gst-launch-1.0' and its switches). **It must end with an *appsink* element**: 
 ``` GStreamerDotNet uridecodebin uri=https://someurl ! queue ! videoconvert ! appsink```
-
-Main purpose of this sample is to introduce [GstVideoStream class](GstVideoStream/GstVideoStream.cs) that helps creating video procesing pipelines and handling raw video frames. 
 
 Read [this post](https://vladkol.com/posts/gstreamer/) for the details.
